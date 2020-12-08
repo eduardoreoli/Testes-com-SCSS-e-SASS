@@ -1,20 +1,12 @@
-.text-1 {
-  font-size: 15px;
+.blue-text {
+  color: blue;
 }
 
-.text-2 {
-  font-size: 30px;
+.red-text {
+  color: red;
 }
 
-.text-3 {
-  font-size: 45px;
-}
-
-.text-4 {
-  font-size: 60px;
-}
-
-.text-5 {
-  font-size: 75px;
+.green-text {
+  color: green;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,5 @@
-@for $i from 1 through 5 {
-    .text-#{$i} {
-        font-size: 15px * $i;
-    }
+$colors: (color1: blue, color2: red, color3:green);
+
+@each $key, $color in $colors {
+    .#{$color}-text {color: $color;}
 }

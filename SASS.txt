@@ -1,0 +1,124 @@
+1 - Criar a pasta onde ficará o site e ir até o Hyper, acessar a pasta criada e abri-la com o comando:
+
+code.
+
+2 - criar arquivo main.scss dentro da pasta css.
+
+3 - ctrl+shift+p, "live saas: watch sass".
+Ele vai criar arquivo map (nao mexer) e main.css. Abrir o main e deixar ele junto com o main.scss.
+
+4 - Para criar variáveis:
+$text-color: #ffffff;
+body{
+background: grey;
+color: $text-color;
+}
+
+5 - Para criar novos arquivos scss separados:
+ a. Crie um novo arquivo scss dentro da pasta css com underline na frente. Ex: _base.scss
+ b. Chame o arquivo no main.scss com @import 'base' (sem underline nem .scss)
+
+6 - Encadeiamento
+ Pode-se aninhar elementos dentro do outro:
+<body>
+	<div class="container">
+		<h1>Título</h1>
+		<p>Alguma coisa.</p>
+	</div>
+</body>
+
+.container {
+    color: white;
+
+    p {
+        color: blue;
+    }
+}
+
+
+6 - Mixin e include
+ Podemos criar um padrão com o mixin:
+ @mixin cor_padrao(){
+	background-color: black;
+ }
+ Depois podemos usá-lo dentro de um elemento com include:
+ .box {
+	width: 200px;
+	eight: 200px;
+	@include cor_padrao();
+ }
+
+Podemos também passar variáveis dessa forma:
+ @mixin cor_padrao($color){
+	background-color: $color;
+ }
+ .box {
+	@include cor_padrao(white);
+ }
+
+
+7 - Condicionais
+Podemos usar @if caso uma condição seja verdadeira ou falsa.
+ @mixin make-bold($bollean){
+	@if $boolean == true {
+		font-weight: bold;
+	}
+ }
+ p {
+	color: $text-color;
+	@include make-bold(true);
+ }
+
+Também podemos incluir @else if para o caso de mais de duas condições:
+
+ @mixin text-effect($var){
+	@if $var == danger {
+		color: red;
+	}
+	@else if $var == alert {
+	color: yellow;
+	}
+	@else {
+	color: black;
+	}
+ }
+ p {
+	@include text-effect(none);
+ }
+ (texto fica preto)
+
+
+8 - Repetições
+Para loops podemos usar a seguinte estrutura:
+ <html>
+ <div class="container">
+       <p class="text-1">Alguma coisa.</p>
+       <p class="text-2">Alguma coisa.</p>
+       <p class="text-3">Alguma coisa.</p>
+       <p class="text-4">Alguma coisa.</p>
+       <p class="text-5">Alguma coisa.</p>
+ </div>
+ <scss>
+ @for $i from 1 through 5 { //no lugar de through também podemos usar "to", porém a contagem irá parar no 4.
+	.text-#{$i} {
+		font-size: 15px * $i; // este comando irá multiplicar o valor do font-size conforme a contagem do loop.
+	}
+ }
+ <resultado>
+ .text-1 {
+   font-size: 15px;
+ }
+ .text-2 {
+   font-size: 30px;
+ }
+ .text-3 {
+   font-size: 45px;
+ }
+ .text-4 {
+   font-size: 60px;
+ }
+ .text-5 {
+   font-size: 75px;
+ }
+
+

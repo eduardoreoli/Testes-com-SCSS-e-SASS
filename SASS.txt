@@ -148,4 +148,13 @@ Quando queremos utilizar repetições dentro de arrays.
  }
 
 
+9.1 - Arrays sem chaves
+Caso a situação seja bastante simples e não necessite de chaves, pode-se utilizar o seguinte comando:
 
+$colors: blue, red, green;
+
+@each $color in $colors {
+    .#{$color}-text {color: $color;}
+}
+
+com o mesmo resultado do processo anterior.

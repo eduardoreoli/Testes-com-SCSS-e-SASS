@@ -1,0 +1,23 @@
+body {
+  background-color: grey;
+  color: black;
+}
+
+.container {
+  -webkit-box-shadow: 14px 14px 16px -14px black;
+          box-shadow: 14px 14px 16px -14px black;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  color: white;
+}
+
+.container p {
+  width: 90px;
+  height: 90px;
+  background-color: yellow;
+  -webkit-box-shadow: 14px 14px 16px -14px black;
+          box-shadow: 14px 14px 16px -14px black;
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */

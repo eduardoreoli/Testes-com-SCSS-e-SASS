@@ -13,4 +13,16 @@ body {
 .green-color {
   color: green;
 }
+
+.pequena-fonte {
+  font-size: 10px;
+}
+
+.media-fonte {
+  font-size: 30px;
+}
+
+.grande-fonte {
+  font-size: 45px;
+}
 /*# sourceMappingURL=main.css.map */

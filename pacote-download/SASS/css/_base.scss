@@ -6,3 +6,9 @@ $crieUmaColecao: (colecao1: blue, colecao2: red, colecao3: green);
 @each $item, $colecao in $crieUmaColecao {
     .#{$colecao}-color {color: $colecao}
 }
+$aumentarLetras: (pequena: 10, media: 30, grande: 45);
+@each $item, $letras in $aumentarLetras {
+    .#{$item}-fonte {
+        font-size: #{$letras}px
+    }
+}

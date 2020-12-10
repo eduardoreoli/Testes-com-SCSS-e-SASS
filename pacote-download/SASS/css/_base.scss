@@ -1,11 +1,32 @@
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 body {
     background-color: white;
-    @extend .flex;
-    height: 100%;
+}
+
+/*
+//em um caso como o do hover:
+p {
+    color: red;
+}
+
+p:hover {
+    color: blue;
+// podemos:
+}*/
+
+/* 
+//se colocarmos assim não irá funcionar:
+p {
+    color: red;
+    :hover {
+        color: blue
+    }
+}*/
+
+//devemos colocar um & em frente ao :hover
+
+p {
+    color: red;
+    &:hover {
+        color: blue
+    }
 }

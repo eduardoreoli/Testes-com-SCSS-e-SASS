@@ -1,17 +1,31 @@
-.flex, body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
+@charset "UTF-8";
 body {
   background-color: white;
-  height: 100%;
+}
+
+/*
+//em um caso como o do hover:
+p {
+    color: red;
+}
+
+p:hover {
+    color: blue;
+// podemos:
+}*/
+/* 
+//se colocarmos assim não irá funcionar:
+p {
+    color: red;
+    :hover {
+        color: blue
+    }
+}*/
+p {
+  color: red;
+}
+
+p:hover {
+  color: blue;
 }
 /*# sourceMappingURL=main.css.map */

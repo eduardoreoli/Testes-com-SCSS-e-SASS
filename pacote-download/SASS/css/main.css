@@ -1,12 +1,16 @@
-.blue-text {
+body {
+  background-color: white;
+}
+
+.blue-color {
   color: blue;
 }
 
-.red-text {
+.red-color {
   color: red;
 }
 
-.green-text {
+.green-color {
   color: green;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,8 @@
-$colors: blue, red, green;
+body {
+    background-color: white;
+}
 
-@each $color in $colors {
-    .#{$color}-text {color: $color;}
+$crieUmaColecao: (colecao1: blue, colecao2: red, colecao3: green);
+@each $item, $colecao in $crieUmaColecao {
+    .#{$colecao}-color {color: $colecao}
 }
